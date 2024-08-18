@@ -15,11 +15,11 @@ class SocketIOHandler:
 
 
 
-    def run(self,app,host,port):
+    def run(self):
         """
         Runs the Socket.IO server.
         """
-        self.socketio.run(app,host,port)
+        self.socketio.run(app)
 
 
     def handle_user_left_room(self,data):
