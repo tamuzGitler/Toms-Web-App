@@ -96,5 +96,4 @@ with app.app_context():
 
 
 
-if __name__ == '__main__':
-    socketio_handler.run(app)
+socketio_handler.run(app)
