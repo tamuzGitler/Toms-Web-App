@@ -6,7 +6,7 @@ import uuid
 class SocketIOHandler:
     def __init__(self, app) -> None:
         self.rooms = {}
-        self.socketio = SocketIO(app, async_mode='threading', cors_allowed_origins="*")
+        self.socketio = SocketIO(app, async_mode='gevent', cors_allowed_origins="*")
         self.socketio.on_event('connect', self.handle_on_connect)
         self.socketio.on_event('join_room', self.handle_join_room)
         self.socketio.on_event('userLeft', self.handle_user_left_room)
