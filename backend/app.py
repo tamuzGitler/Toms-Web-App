@@ -95,5 +95,5 @@ with app.app_context():
             db.session.rollback()  # Roll back changes in case of an error
 
 
-if __name__ == '__main__':
-    socketio_handler.run(app)
+# if __name__ == '__main__':
+#     socketio_handler.run(app)
