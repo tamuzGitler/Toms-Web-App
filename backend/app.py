@@ -23,12 +23,14 @@ from flask import jsonify # takes Python data structures and converts them into 
 from flask import Flask, render_template
 from flask import request 
 from flask import send_from_directory
-import os
 from models import db, CodeBlock 
 from flask_cors import CORS
 from collections import defaultdict
 from socket_handler import SocketIOHandler
 from jsCodeExamples import TITLES,TEMPLATES, SOLUTIONS, DESCRIPTIONS, TASKS
+from waitress import serve
+import logging
+
 ######################## Constants ########################
 
 
@@ -96,3 +98,9 @@ with app.app_context():
 
 # if __name__ == '__main__':
 #     socketio_handler.run(app)
+# if __name__ == '__main__':
+#     logging.basicConfig(level=logging.DEBUG)
+
+#     print("Starting server...")
+#     serve(app, host='0.0.0.0', port=5000)
+#     print("Server started")
