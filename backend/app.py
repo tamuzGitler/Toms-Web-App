@@ -21,7 +21,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify # takes Python data structures and converts them into JSON format
 # from flask_socketio import SocketIO, emit, join_room, leave_room
 from flask import Flask, render_template
-from collections import defaultdict
 from flask import request 
 from flask import send_from_directory
 import os
